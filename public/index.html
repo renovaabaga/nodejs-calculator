@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test API Calculator</title>
+</head>
+<body>
+  <h2>Calculer la somme</h2>
+  <input type="text" id="sumInput" placeholder="Ex: 2,3,5">
+  <button onclick="sendSum()">Calculer la somme</button>
+  <p id="sumResult"></p>
+
+  <h2>Calculer la moyenne</h2>
+  <input type="text" id="meanInput" placeholder="Ex: 7,-3,5">
+  <button onclick="sendMean()">Calculer la moyenne</button>
+  <p id="meanResult"></p>
+
+  <script>
+    async function sendSum() {
+      const valeurs = document.getElementById('sumInput').value.split(',').map(Number);
+      const response = await fetch('/sum', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ termes: valeurs })
+      });
+      const data = await response.json();
+      document.getElementById('sumResult').innerText = `Résultat : ${data.result}`;
+    }
+
+    async function sendMean() {
+      const valeurs = document.getElementById('meanInput').value.split(',').map(Number);
+      const response = await fetch('/mean', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ termes: valeurs })
+      });
+      const data = await response.json();
+      document.getElementById('meanResult').innerText = `Résultat : ${data.result}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "name": "nodejs-calculator",
+  "version": "1.0.0",
+  "description": "- Ajouter le message console.log(\"Add: 2 + 3 = \" + calculator.add(2, 3))\r - Lancer le programme avec ``node server.mjs``. Vous devriez voir le message:\r   ``'Add: 2 + 3 = 5'``",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tooluxarala/nodejs-calculator.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Math"
+  ],
+  "author": "Toolu Xarala",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tooluxarala/nodejs-calculator/issues"
+  },
+  "homepage": "https://github.com/tooluxarala/nodejs-calculator#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
