@@ -124,3 +124,21 @@
         "result": 3
   }
 ```
+# Node.js Calculator — Devoir M2 GLO,Maria Angela ABAGA NVE
+
+## 🔍 Objectif
+Développer un micro-service de calcul avec Node.js et Express, comportant deux endpoints REST : `/sum` et `/mean`.
+
+## 🧠 Fonctionnalités
+- Addition, soustraction, multiplication, division de deux nombres.
+- Somme d’une liste de nombres.
+- Moyenne d’une liste de nombres.
+- Endpoints REST POST `/sum` et `/mean` utilisant Express.
+
+---
+
+## 🚀 Lancement du serveur
+
+### Installation des dépendances :
+```bash
+npm install
